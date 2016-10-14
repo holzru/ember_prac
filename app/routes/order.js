@@ -5,6 +5,6 @@ export default Ember.Route.extend({
     return [
       {id: '1', name: 'Nate'},
       {id: '2', name: 'Gregg'}
-    ];
+    ].findBy('id', params.order_id);
   }
 });
