@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return 'Nate';
+    return [{id: '1', name: 'Nate'},
+            {id: '2', name: 'Gregg'}];
   }
 });
