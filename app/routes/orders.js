@@ -1,10 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
-    return [
-      {id: '1', name: 'Nate'},
-      {id: '2', name: 'Gregg'}
-    ];
-  }
+  model() {
+    const store = this.get('store');
+    return store.getOrders();
+  },
+  store: Ember.inject.service()
 });
