@@ -1,4 +1,11 @@
 import Ember from 'ember';
+import LineItem from 'woodland/models/line-item';
+import Order from 'woodland/models/order';
+import Product from 'woodland/models/product';
+
+const products = [
+
+];
 
 export default Ember.Service.extend({
   getOrders() {
@@ -11,5 +18,7 @@ export default Ember.Service.extend({
   getOrderById(id) {
     const orders = this.getOrders();
     return orders.findBy('id', id);
-  }
+  },
+
+  getProducts() {return products;}
 });
